@@ -24,7 +24,7 @@ $("#addTrain").on("click", function (event) {
     trainName = $("#name-input").val().trim();
     trainDestination = $("#destination").val().trim();
     firstTrainHere = moment($("#first-input").val().trim(), "m mm").format("X");
-    Trainfrequency = moment($("#frequency").val().trim(), "m mm").format("X");
+    Trainfrequency = $("#frequency").val().trim();
 
 // pushes the information to the firebase database
     database.ref().push({
@@ -51,12 +51,13 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
 
     var trainMinAway = frequency % firstTrain;
     console.log(trainMinAway);
+    
+    var nextArrive = 
 
     $("#trainInfo").append("<tr>" +
         "<td>" + childSnapshot.val().name + "</td>" +
         "<td>" + childSnapshot.val().destination + "</td>" +
-        "<td>" + firstTrain + "</td>" +
-        "<td>" + Trainfrequency + "</td>" +
+        "<td>" + childSnapshot.val().frequency + "</td>" +
         //"<td> </td>" +
         "<td>" + childSnapshot.val().minAway + "</td>" +
         //"<td> </td>" +
