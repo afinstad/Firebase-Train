@@ -1,6 +1,26 @@
+/* gives text properties and background image in jumbostron */
 .jumbotron {
-    background-color: black;
-    color: white;
+    color: red;
     margin: 10px 190px;
-    text-align: center;
+    text-align: left;
+    font-size: 150px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0t_UaTn1C26XMaATvFPBzSkMsxxj9U_qR0TKazA7AV6X9ehGs");
+    background-size: cover;
 }
+/* gives page background color */
+body {
+    background-color: lightblue
+    
+}
+/* gives a margin under the bottom so not so close to the edge of the page */
+button {
+    margin-bottom: 50px;
+}
+
+.container {   
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+   
+}
+
