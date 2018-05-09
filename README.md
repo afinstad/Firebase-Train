@@ -1,2 +1,3 @@
 # Firebase-Train
-Homework week 7
+
+https://afinstad.github.io/Firebase-Train/
